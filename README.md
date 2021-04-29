@@ -10,7 +10,6 @@ The Stacks used are:
 
 #Pictures 
 
-![ScreenShot](Screenshot (130).png)
-![ScreenShot](Screenshot (131).png)
-![ScreenShot](Screenshot (132).png)
-![ScreenShot](Screenshot (133).png)
+<img src="a.png" alt="Project Screenshot">
+<img src="b.png" alt="Project Screenshot">
+<img src="c.png" alt="Project Screenshot">
