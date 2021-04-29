@@ -1,16 +1,15 @@
 <template>
 	<div class="hidden lg:flex lg:flex-col">
 		<div class="flex">
-			<div class="w-3/5 bg-d-image-hero bg-auto bg-no-repeat bg-cover bg-center">
-				<div class="flex items-baseline font-semibold text-gray-200 text-md px-10 ml-5 py-16">
-					<logo class="mr-10" />
-					<a class="mr-8" href="#">home</a>
-					<a class="mr-8" href="#">shop</a>
-					<a class="mr-8" href="#">about</a>
-					<a href="#">contact</a>
+				<div id="slider" class="w-3/5 bg-auto bg-no-repeat bg-cover bg-center">
+					<div class="flex items-baseline font-semibold text-gray-200 text-md px-10 ml-5 py-16">
+						<logo class="mr-10" />
+						<a class="mr-8" href="#">home</a>
+						<a class="mr-8" href="#">shop</a>
+						<a class="mr-8" href="#">about</a>
+						<a href="#">contact</a>
+					</div>
 				</div>
-			</div>
-
 			<!--  -->
 			<div class="w-2/5 px-20 py-20 relative">
 				<div class="mb-28">
@@ -59,6 +58,46 @@
 	export default {
 		components: {
 			Logo,
+		},
+
+		data() {
+			return {
+			}
+		},
+
+		mounted() {
+			setInterval(this.Slider(), 1000)
+			// this.Slider
+		},
+
+		methods: {
+			Slider() {
+				const images = [
+					'bg-d-hero-1',
+					'bg-d-hero-2',
+					'bg-d-hero-3',
+				]
+
+				let currSlide = 0
+				
+				document.getElementById('slider')
+						.classList
+						.add(images[currSlide])
+
+
+				if (currSlide < images.length - 1) {
+					currSlide++
+				} else {
+					currSlide = 0
+				}
+
+				setInterval(() => {
+					// currSlide < images.length - 1 ? currSlide++ : currSlide = 0
+					document.getElementById('slider')
+						.classList
+						.replace(images[currSlide], images[++currSlide])
+				}, 1000)
+			}
 		}
 	}
 </script>

@@ -69,21 +69,6 @@
 			MobileNav,
 		}, 
 
-		methods: {
-			slideShow() {
-				const images = [
-					'@/helpers/images/mobile-image-hero-1.jpg',
-					'@/helpers/images/mobile-image-hero-2.jpg',
-					'@/helpers/images/mobile-image-hero-3.jpg',
-				]
-
-				currentIndex = 0
-				slideDuration = 5000
-
-				document.getElementById('')
-			}
-		}
-
 	}
 </script>
 

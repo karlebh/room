@@ -10,7 +10,9 @@ module.exports = {
     extend: {
     	backgroundImage: theme => ({
         'm-image-hero': "url('./helpers/images/mobile-image-hero-1.jpg')",
-        'd-image-hero': "url('./helpers/images/desktop-image-hero-1.jpg')",
+        'd-hero-1': "url('./helpers/images/desktop-image-hero-1.jpg')",
+        'd-hero-2': "url('./helpers/images/desktop-image-hero-2.jpg')",
+        'd-hero-3': "url('./helpers/images/desktop-image-hero-3.jpg')",
         'about-light': "url('./helpers/images/image-about-light.jpg')",
         'about-dark': "url('./helpers/images/image-about-dark.jpg')",
        
