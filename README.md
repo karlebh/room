@@ -10,7 +10,7 @@ The Stacks used are:
 
 #Pictures 
 
-![alt text](../Screenshot (130).png)
-![alt text](../Screenshot (131).png)
-![alt text](../Screenshot (132).png)
-![alt text](../Screenshot (133).png)
+![ScreenShot](Screenshot (130).png)
+![ScreenShot](Screenshot (131).png)
+![ScreenShot](Screenshot (132).png)
+![ScreenShot](Screenshot (133).png)
