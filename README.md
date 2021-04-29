@@ -7,3 +7,10 @@ The Stacks used are:
 - VueJs
 - HTML
 - TailwindCss
+
+#Pictures 
+
+![alt text](../Screenshot (130).png)
+![alt text](../Screenshot (131).png)
+![alt text](../Screenshot (132).png)
+![alt text](../Screenshot (133).png)
