@@ -25,8 +25,8 @@
 				</div>
 
 				<div class="absolute left-0 bottom-0 flex text-white block">
-					<span class="bg-black px-4 pb-3 text-8xl font-thin text-gray-100 hover:bg-gray-200 hover:text-black cursor-pointer ">&lt;</span>
-					<span class="bg-black px-4 pb-3 text-8xl font-thin text-gray-100 hover:bg-gray-200 hover:text-black cursor-pointer ">&gt;</span>
+					<button @click="prev()" class="bg-black px-4 pb-3 text-8xl font-thin text-gray-100 hover:bg-gray-200 hover:text-black cursor-pointer ">&lt;</button>
+					<button @click="next()" class="bg-black px-4 pb-3 text-8xl font-thin text-gray-100 hover:bg-gray-200 hover:text-black cursor-pointer ">&gt;</button>
 				</div>
 			</div>
 		</div>
@@ -62,6 +62,12 @@
 
 		data() {
 			return {
+				const images = [
+					'bg-d-hero-1',
+					'bg-d-hero-2',
+					'bg-d-hero-3',
+				], 
+				let curr = 0,
 			}
 		},
 
@@ -71,25 +77,24 @@
 		},
 
 		methods: {
+			controls() {
+				if (this.curr > this.images.length) this.curr = 0
+				if (this.curr < 0) this.curr = this.images.length
+			},
+			next() {
+				this.controls()
+				this.images[this.curr++]
+			},
+			prev() {
+				this.controls()
+				this.images[this.curr--]
+			},
+			
 			Slider() {
-				const images = [
-					'bg-d-hero-1',
-					'bg-d-hero-2',
-					'bg-d-hero-3',
-				]
-
-				let currSlide = 0
-				
+				this.controls()
 				document.getElementById('slider')
 						.classList
 						.add(images[currSlide])
-
-
-				if (currSlide < images.length - 1) {
-					currSlide++
-				} else {
-					currSlide = 0
-				}
 
 				setInterval(() => {
 					// currSlide < images.length - 1 ? currSlide++ : currSlide = 0
